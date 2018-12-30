@@ -1,0 +1,5 @@
+E:\Aspose\AsposeTechAssignment\AsposeTechAssignment\bin\Debug\Aspose.dll
+E:\Aspose\AsposeTechAssignment\AsposeTechAssignment\bin\Debug\Aspose.pdb
+E:\Aspose\AsposeTechAssignment\AsposeTechAssignment\obj\Debug\Aspose.Entities.csproj.CoreCompileInputs.cache
+E:\Aspose\AsposeTechAssignment\AsposeTechAssignment\obj\Debug\Aspose.dll
+E:\Aspose\AsposeTechAssignment\AsposeTechAssignment\obj\Debug\Aspose.pdb

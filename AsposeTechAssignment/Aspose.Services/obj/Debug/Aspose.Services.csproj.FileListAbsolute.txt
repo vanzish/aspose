@@ -1,0 +1,11 @@
+E:\Aspose\AsposeTechAssignment\Aspose.Services\bin\Debug\Aspose.Services.dll
+E:\Aspose\AsposeTechAssignment\Aspose.Services\bin\Debug\Aspose.Services.pdb
+E:\Aspose\AsposeTechAssignment\Aspose.Services\obj\Debug\Aspose.Services.csprojAssemblyReference.cache
+E:\Aspose\AsposeTechAssignment\Aspose.Services\obj\Debug\Aspose.Services.csproj.CoreCompileInputs.cache
+E:\Aspose\AsposeTechAssignment\Aspose.Services\obj\Debug\Aspose.Services.dll
+E:\Aspose\AsposeTechAssignment\Aspose.Services\obj\Debug\Aspose.Services.pdb
+E:\Aspose\AsposeTechAssignment\Aspose.Services\bin\Debug\Aspose.Services.Interfaces.dll
+E:\Aspose\AsposeTechAssignment\Aspose.Services\bin\Debug\Aspose.Services.Interfaces.pdb
+E:\Aspose\AsposeTechAssignment\Aspose.Services\obj\Debug\Aspose.Services.csproj.CopyComplete
+E:\Aspose\AsposeTechAssignment\Aspose.Services\bin\Debug\Aspose.dll
+E:\Aspose\AsposeTechAssignment\Aspose.Services\bin\Debug\Aspose.pdb

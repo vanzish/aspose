@@ -1,0 +1,15 @@
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Aspose.IoC.dll
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Aspose.IoC.pdb
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Aspose.Services.dll
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Aspose.Services.Interfaces.dll
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Autofac.dll
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Aspose.Services.Interfaces.pdb
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Aspose.Services.pdb
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Autofac.xml
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\obj\Debug\Aspose.IoC.csprojAssemblyReference.cache
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\obj\Debug\Aspose.IoC.csproj.CoreCompileInputs.cache
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\obj\Debug\Aspose.IoC.csproj.CopyComplete
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\obj\Debug\Aspose.IoC.dll
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\obj\Debug\Aspose.IoC.pdb
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Aspose.dll
+E:\Aspose\AsposeTechAssignment\Aspose.IoC\bin\Debug\Aspose.pdb
