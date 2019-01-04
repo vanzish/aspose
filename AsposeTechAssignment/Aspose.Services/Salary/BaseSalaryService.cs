@@ -1,47 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using Aspose.Services.Interfaces;
+﻿using Aspose.Services.Interfaces;
 using Aspose.Staff;
+using System;
 
 namespace Aspose.Services.Salary
 {
     public class BaseSalaryService
     {
-        protected const decimal Percent = 3m;
-        protected const decimal MaxPercent = 30m;
-        protected const decimal SubordinatesPercent = 0.3m;
+        protected virtual decimal Percent => 3m;
+
+        protected virtual decimal MaxPercent => 30m;
+
+        protected virtual decimal SubordinatesPercent => 0.3m;
 
         protected readonly ISalaryService salaryService;
-
-        private readonly Dictionary<int, decimal> salaryCache = new Dictionary<int, decimal>();
 
         public BaseSalaryService(ISalaryService salaryService)
         {
             this.salaryService = salaryService;
         }
 
-        public virtual decimal GetSalary(Employee employee)
+        public virtual decimal GetSalary(Employee employee, DateTime? date = null)
         {
-            var years = GetWorkYears(employee.HireDate);
+            var years = GetWorkYears(employee.HireDate, date);
+            if (years < 0)
+            {
+                return 0m;
+            }
+
             var percentage = Percent * years > MaxPercent ? MaxPercent : Percent * years;
             return employee.BaseSalary * (1 + percentage / 100);
         }
 
-        protected decimal GetSalaryFromCache(Employee employee)
+        private int GetWorkYears(DateTime hireDateTime, DateTime? searchDate = null)
         {
-            if (salaryCache.TryGetValue(employee.Id, out decimal result))
+            var now = searchDate ?? DateTime.UtcNow;
+            var years = now.Year - hireDateTime.Year;
+            if(hireDateTime > now.AddYears(-years))
             {
-                return result;
+                years -= 1;
             }
 
-            result = salaryService.GetSalary(employee);
-            salaryCache[employee.Id] = result;
-            return result;
-        }
-
-        private int GetWorkYears(DateTimeOffset dateTime)
-        {
-            return DateTime.UtcNow.Year - dateTime.UtcDateTime.Year;
+            return years;
         }
     }
 }

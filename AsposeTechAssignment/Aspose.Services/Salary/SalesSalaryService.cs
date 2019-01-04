@@ -1,41 +1,26 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Aspose.Services.Interfaces;
+﻿using Aspose.Services.Interfaces;
 using Aspose.Staff;
+using System;
 
 namespace Aspose.Services.Salary
 {
     public class SalesSalaryService : BaseSalaryService
     {
-        protected new const decimal Percent = 1m;
-        protected new const decimal MaxPercent = 35m;
-        protected new const decimal SubordinatesPercent = 0.3m;
+        protected override decimal Percent => 1m;
+
+        protected override decimal MaxPercent => 35m;
+
+        protected override decimal SubordinatesPercent => 0.3m;
 
         public SalesSalaryService(ISalaryService salaryService) : base(salaryService)
         {
         }
 
-        public override decimal GetSalary(Employee employee)
+        public override decimal GetSalary(Employee employee, DateTime? date = null)
         {
-            var manager = (BaseManager)employee;
-            var salary = base.GetSalary(manager);
-
-            decimal salariesSum = 0;
-            var queue = new Queue<Employee>(manager.Subordinates);
-            while (queue.Any())
-            {
-                var empl = queue.Dequeue();
-                if (empl.StaffType != StaffType.Employee)
-                {
-                    foreach (var subordinate in ((BaseManager)empl).Subordinates)
-                    {
-                        queue.Enqueue(subordinate);
-                    }
-                }
-
-                salariesSum += GetSalaryFromCache(empl);
-            }
-
+            var manager = (Sales)employee;
+            var salary = base.GetSalary(manager, date);
+            decimal salariesSum = salaryService.EmployeesSalariesSum(manager.Subordinates, date);
             return salary + salariesSum * (SubordinatesPercent / 100);
         }
     }

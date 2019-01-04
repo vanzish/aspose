@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace Aspose.Staff
 {
@@ -10,7 +9,7 @@ namespace Aspose.Staff
 
         public string Name { get; set; }
 
-        public DateTimeOffset HireDate { get; set; }
+        public DateTime HireDate { get; set; }
 
         public decimal BaseSalary { get; set; }
 

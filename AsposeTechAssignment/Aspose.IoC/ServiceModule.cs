@@ -1,9 +1,8 @@
-﻿using System;
-using Aspose.Services;
-using Aspose.Services.Interfaces;
+﻿using Aspose.Services;
 using Aspose.Services.Salary;
 using Aspose.Staff;
 using Autofac;
+using System;
 
 namespace Aspose.IoC
 {
@@ -14,7 +13,8 @@ namespace Aspose.IoC
             builder
                 .RegisterAssemblyTypes(typeof(AssemblyHolder).Assembly)
                 .Where(x => x.Name.EndsWith("Service"))
-                .AsImplementedInterfaces();
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
 
             builder
                 .RegisterAssemblyTypes(typeof(AssemblyHolder).Assembly)

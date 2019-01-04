@@ -34,3 +34,7 @@ bld/
 # NUNIT
 *.VisualState.xml
 TestResult.xml
+
+#packages
+
+[Pp]ackages/
